@@ -6,8 +6,10 @@ const Home = (): JSX.Element => {
   const { forecast, options, term, onOptionSelect, onSubmit, onInputChange } =
     useForecast();
 
+  console.log(forecast);
+
   return (
-    <main className="flex justify-center items-center bg-gradient-to-br from-sky-400 via-rose-400 to-lime-400 h-[100vh] w-full">
+    <>
       {forecast ? (
         <Forecast data={forecast} />
       ) : (
@@ -19,7 +21,7 @@ const Home = (): JSX.Element => {
           onSubmit={onSubmit}
         />
       )}
-    </main>
+    </>
   );
 };
 

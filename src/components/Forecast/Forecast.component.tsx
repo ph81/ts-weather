@@ -18,8 +18,8 @@ const Forecast = ({ data }: ForecastProps) => {
   const today = data.list[0];
 
   return (
-    <div className="w-full md:max-w-[500px] py-4 md:py-4 md:px-10 lg:px-24 h-full lg:h-auto bg-white bg-opacity-20 backdrop-blur-ls rounded drop-shadow-lg">
-      <div className="mx-auto w-[300px]">
+    <div className="w-full md:max-w-[700px] py-4 md:py-4 md:px-10 lg:px-24 lg:h-auto bg-white bg-opacity-20 backdrop-blur-ls rounded drop-shadow-lg">
+      <div className="mx-auto w-[500px]">
         <section className="text-center">
           <h2 className="text-2xl font-black">
             {data.name} <span className="font-thin">{data.country}</span>
@@ -58,12 +58,15 @@ const Forecast = ({ data }: ForecastProps) => {
 
         <section className="flex flex-wrap justify-between text-zinc-700">
           <div className="w-[140px] text-xs font-bold flex flex-col items-center bg-white/20 backdrop-blur-ls rounded drop-shadow-lg py-4 mb-5">
-            <Sunrise /> <span className="mt-2">{getSunTime(data.sunrise)}</span>
+            Sunrise <Sunrise />{' '}
+            <span className="mt-2">{getSunTime(data.sunrise)}</span>
           </div>
           <div className="w-[140px] text-xs font-bold flex flex-col items-center bg-white/20 backdrop-blur-ls rounded drop-shadow-lg py-4 mb-5">
-            <Sunset /> <span className="mt-2">{getSunTime(data.sunset)}</span>
+            Sunset <Sunset />{' '}
+            <span className="mt-2">{getSunTime(data.sunset)}</span>
           </div>
-
+        </section>
+        <section className="flex flex-wrap justify-between text-zinc-700">
           <Tile
             icon="wind"
             title="Wind"
