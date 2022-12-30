@@ -1,7 +1,11 @@
 import Home from './pages/Home';
 
 const App = (): JSX.Element => {
-  return <Home />;
+  return (
+    <main className="flex justify-center items-center">
+      <Home />
+    </main>
+  );
 };
 
 export default App;
