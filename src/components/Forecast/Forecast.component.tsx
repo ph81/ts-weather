@@ -18,8 +18,8 @@ const Forecast = ({ data }: ForecastProps) => {
   const today = data.list[0];
 
   return (
-    <div className="w-full md:max-w-[700px] py-4 md:py-4 md:px-10 lg:px-24 lg:h-auto bg-white bg-opacity-20 backdrop-blur-ls rounded drop-shadow-lg">
-      <div className="mx-auto w-[500px]">
+    <div className="w-full max-w-[90vw] md:max-w-[700px] py-4 md:py-4 md:px-10 lg:px-24 h-[90vh] lg:h-auto bg-white bg-opacity-20 backdrop-blur-ls rounded drop-shadow-lg">
+      <div className="mx-auto w-[300px] md:w-[500px]">
         <section className="text-center">
           <h2 className="text-2xl font-black">
             {data.name} <span className="font-thin">{data.country}</span>

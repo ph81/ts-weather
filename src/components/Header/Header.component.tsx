@@ -6,7 +6,7 @@ const Header = (): JSX.Element => {
       </h1>
       <p className="text-sm mt-2">
         Enter below a place you want to know the weather of and select an option
-        from the options
+        from the suggestions.
       </p>
     </>
   );
